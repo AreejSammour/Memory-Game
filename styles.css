@@ -1,0 +1,260 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap'); */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+
+body {
+  height: 100vh;
+  width: 100%;
+  display: inline-block;
+  background: white;
+}
+
+.siteheader{
+  background-color: rgb(25, 119, 110);
+  height: 80px;
+  padding: 40px;
+  box-shadow: 2px 2px 2px lightgray;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #FAC748;
+  font-weight: 700;
+}
+
+.navmenu{
+  display:flex;
+  list-style: none;
+  gap: 25px;
+}
+
+.logo{
+  font-size:26px;
+}
+
+.headeranchor{
+  padding: 4px 10px;
+  border-radius: 8px;
+  color: white;
+}
+
+.headeranchor:hover{
+  background-color: #FAC748;
+  color: rgb(25, 119, 110);
+}
+
+.ctabutton{
+  padding: 20px 40px;
+  border-radius: 12px;
+  font-weight:800;
+  font-size:40px;
+  color:black;
+  background-color: #FAC748;
+  display:inline-block; 
+}
+
+.ctabutton:hover{
+  background-color: white;
+  border: 1px solid black;
+}
+
+h1{
+  font-size:80px;
+  text-shadow: 4px 4px 0 rgba(0, 0, 0, 0.2);
+  text-transform: uppercase;
+  padding: 50px;
+  text-align: center;
+}
+
+section{
+  text-align: center;
+  padding: 20px 7%;    
+}
+
+.home{
+  background: url('img/onlinegames.jpg');
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  color:white;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.home__content {
+  max-width:800px;
+}
+
+.gameDiv {
+  width: 550px;
+  margin: auto;
+  padding: 25px;
+  background: #f8f0dc;
+  border-radius: 20px;
+}
+.memory-game {
+    width: 450px;
+    height: 450px;
+    background: rgb(25, 119, 110);
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    perspective: 1000px;
+    list-style-type: none;
+  }
+  .memory-card {
+    width: calc(25% - 10px);
+    height: calc(33.333% - 10px);
+    margin: 5px;
+    position: relative;
+    transform: scale(1);
+    transform-style: preserve-3d;
+    transition: transform .5s;
+    box-shadow: 1px 1px 1px rgba(0,0,0,.3);
+  }
+
+  .memory-card:active {
+    transform: scale(0.95);
+    transition: transform .2s;
+  }
+  
+  .memory-card.flip {
+    transform: rotateY(180deg);
+  }
+  
+  .front-face,
+  .back-face {
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    position: absolute;
+    border-radius: 5px;
+    background: #FAC748;
+    backface-visibility: hidden;
+  }
+  
+  .front-face {
+    transform: rotateY(180deg);
+  }
+
+  .details{
+    border-radius: 7px;
+    height: calc(100% / 4 - 30px);
+    margin: auto;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .details button, .time{
+    cursor: pointer;
+    font-size: 15px;
+    color: rgb(25, 119, 110);
+    border-radius: 10px;
+    padding: 4px 11px;
+    background: #fff;
+    border: none;
+    transition: 0.3s ease;
+    width: 150px;
+    height: 30px;
+    margin: 0px 20px;
+  }
+  .details button:hover{
+    color: #fff;
+    background: rgb(25, 119, 110);
+    width: 200px;
+  }
+
+  .time{
+    width: 90px;
+  }
+
+  .time:hover{
+    color: #fff;
+    background: rgb(25, 119, 110);
+    width: 100px;
+  }
+
+  .p-class {
+    font-size: 20px;
+    width: 150px;
+    margin: 2px auto;
+    text-align: center;
+  }
+
+footer{
+  color : white;
+  margin-top: 50px;
+  padding-top: 20px;
+  text-align: center;
+  height:60px;
+  background-color: rgb(25, 119, 110);
+}
+
+@media screen and (max-width: 700px) {
+  .memory-game {
+    height: 350px;
+    width: 350px;
+  }
+  .memory-card .front-view img{
+    max-width: 16px;
+  }
+  .memory-card .back-view img{
+    max-width: 40px;
+  }
+}
+h1{
+  font-size:60px;
+  text-shadow: 4px 4px 0 rgba(0, 0, 0, 0.2);
+  padding: 40px;
+}
+
+@media screen and (max-width: 530px) {
+  .memory-game {
+    height: 300px;
+    width: 300px;
+  }
+  .memory-card .back-view img{
+    max-width: 35px;
+  }
+  .details{
+    margin-top: 10px;
+    padding: 0 15px;
+    height: calc(100% / 4 - 20px);
+  }
+  .details p{
+    height: 15px;
+    font-size: 17px;
+    padding-right: 13px;
+  }
+  .details button{
+    font-size: 13px;
+    padding: 5px 10px;
+    border: none;
+    width: 100px;
+  }
+  .details button:hover{
+    width: 120px;
+  }
+  h1{
+    font-size:50px;
+    text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.2);
+    padding: 30px;
+  }
+  .time{
+    width: 70px;
+  }
+
+  .time:hover{
+    width: 80px;
+  }
+
+  .p-class {
+    font-size: 15px;
+    width: 70px;
+  }
+}

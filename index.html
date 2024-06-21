@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Document</title>
+    
+</head>
+<body>
+    <header class="siteheader">
+        <div class="logo">
+            <i class='bx bxs-game logoicon'></i>
+            GameLovers             
+        </div>
+        <nav>
+            <ul class="navmenu">
+                <li><a class="headeranchor" href="#">Card Games</a></li>
+                <li><a class="headeranchor" href="#">Memory Games</a></li>
+                <li><a class="headeranchor" href="#">Puzzle Games</a></li>
+                <li><a class="headeranchor" href="#">Skill Games</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="home" id="home">
+            <div class="home__content">
+                <p class="ctabutton">Memory Games</p>
+            </div>
+        </section>
+        <h1>Memory Game</h1>
+        <div class="gameDiv">
+            <ul class="memory-game" id="card">
+            </ul>
+            <div class="details">
+                <select class="time" id="timeCategory" onchange="getOption()"></select>
+                <div class="p-class">
+                    <p class="flips" id="antalCount">Antal: <span><b>0</b></span></p>
+                    <p id="timeid"></p></div>
+                <button id="reset">Starta om</button>
+            </div>
+            
+        </div>
+        
+    </main>
+    <footer>
+        Copyright 2023 by (Areej Sammour-Joel Sturesjö-Sofija Lindmark)
+      </footer>
+ 
+    <script src="script.js"></script>
+    
+</body>
+
+</html>
+
+
+
+
+
+
+
+
